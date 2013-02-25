@@ -20,10 +20,10 @@ class PinForm(forms.ModelForm):
     image = forms.ImageField(widget=FileInput(),label='or Upload', required=False)
     uImage = forms.CharField(widget=HiddenInput(attrs={'style':'display: none;'}), required=False)
     repin = forms.CharField(widget=HiddenInput(attrs={'style':'display: none;'}),required=False, initial=None)
-    tags = CustomTagField(label='*New Tag ?', help_text='You can enter multiple tags:                                        '
-                                                      'tagone  tagtwo            = (Tagone) (Tagtwo)                       '
-                                                      'tag one,  tag two         = (Tag one) (Tag two)                     '
-                                                      'one  two  "tag, three" = (One) (Two) (tag, three)               ', 
+    tags = CustomTagField(label='*New Tag ?', help_text='You can enter multiple tags seperated by spaces, commas, or quotes: '
+                                                      'tagone  tagtwo =(Tagone) (Tagtwo) / '
+                                                      'tag one,  tag two = (Tag one) (Tag two) / '
+                                                      'one  two  "tag, three" = (One) (Two) (tag, three)', 
                                                       required=False)
     tagsUser = UserTagsField(queryset=Pin.tags.all(), help_text='Use CONTROLL + CLICK to add or remove tags', label='*Your Tags ?', required=False)
     #tagsTest = ComboField(queryset=Pin.tags.all(), label='*Your Tags', required=False)

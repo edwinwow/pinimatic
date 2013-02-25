@@ -494,7 +494,7 @@ function onLoadData(data) {
 	}
 	
 	//TOUCH DEVICE SETUP features
-	if (is_touch_device()){
+	if (!is_touch_device()){
 		$('.touch-off').toggleClass('touch-off touch-on');
 		$('.touch-on').toggleClass('hide show');
 	}
@@ -502,7 +502,9 @@ function onLoadData(data) {
 	isLoading = false;
 	$('#loader').hide();
 };
-
+$(document).on( 'click touchstart', 'label[title]', function(e){	
+			alert(e.target.title)
+	});
 
 //FORM SUBMIT FUNCTIONS
 $(document).ready(new function() {
