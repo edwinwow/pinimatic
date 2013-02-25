@@ -1107,10 +1107,7 @@ function cancelNewPin(){
 	//get default image
 	$(thumbTarget).attr("src", '/static/core/img/thumb-default.png');
 }
-//tags autocomplete
-$('input[name="tags"]').autocomplete({
-	source: ["tag 1", "tag 2", "tag 3", "tag 4"]
-});
+
 
 /** 
  * UTILITIES

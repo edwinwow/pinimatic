@@ -2,7 +2,7 @@
 <div id="div_{{ field.id_for_label }}" class="control-group{% if field.errors %} error{% endif %}" style="display:none;">
 {% elif not field.is_hidden %}
 <div id="div_{{ field.id_for_label }}" class="control-group{% if field.errors %} error{% endif %}">
-    <label id="{{ field.id_for_label }}_label" class="control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+    <label id="{{ field.id_for_label }}_label" title="{{ field.help_text }}" class="control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
 {% endif %}
 {% if field.errors %}
 	<span class="help-inline control-label">
