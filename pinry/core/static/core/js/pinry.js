@@ -502,9 +502,11 @@ function onLoadData(data) {
 	isLoading = false;
 	$('#loader').hide();
 };
+
+//label tool-tips with ios support
 $(document).on( 'click touchstart', 'label[title]', function(e){	
-			alert(e.target.title)
-	});
+	alert(e.target.title)
+});
 
 //FORM SUBMIT FUNCTIONS
 $(document).ready(new function() {
